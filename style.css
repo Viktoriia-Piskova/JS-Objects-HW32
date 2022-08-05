@@ -1,0 +1,41 @@
+section{
+    background-color: aquamarine;
+    position: relative;
+    z-index: -99;
+}
+
+.carCard{
+    border: 3px black solid;
+    background-color: #ffffff82;
+    position: relative;
+    padding: 10px;
+    line-height: 3;
+    color: white;
+    font-family: monospace;
+    font-size: x-large;
+    z-index: 99;
+    width: 100vw;
+}
+
+
+
+input{
+    display: block;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.image-container{
+    position: absolute;
+    right: 0px;
+    z-index: -2;
+    top: 0px;
+}
+
+.answer{
+    margin-top: 50px;
+}
