@@ -1,41 +1,84 @@
-section{
-    background-color: aquamarine;
-    position: relative;
-    z-index: -99;
+* {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 3;
 }
 
-.carCard{
-    border: 3px black solid;
-    background-color: #ffffff82;
-    position: relative;
-    padding: 10px;
-    line-height: 3;
+section {
+ margin-bottom: 20px;
+}
+
+.carCard {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+}
+
+table {
+  background-color: #000203;
+  color: #c0c0c0;
+}
+
+td {
+  padding: 0px 20px;
+}
+
+tr {
+  border-bottom: #5373fd 1px solid;
+}
+
+.answer-auto {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+input {
+  display: block;
+  height: 40px;
+  margin: 20px 0px;
+}
+
+input:focus {
+  border: 3px solid #5373fd;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.answer {
+  margin-top: 50px;
+}
+
+.question {
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    209deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 40, 255, 1) 99%
+  );
+}
+
+.inputs{
+    background-color: #000203;
     color: white;
-    font-family: monospace;
-    font-size: x-large;
-    z-index: 99;
-    width: 100vw;
+    padding: 20px 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 }
 
-
-
-input{
-    display: block;
-}
-
-img{
+#clock{
     width: 100%;
-    height: auto;
-    
-}
+    padding: 9%;
+    text-align: center;
+    color: white;
+    font-size: 12rem;
+    text-shadow: 8px 8px black
 
-.image-container{
-    position: absolute;
-    right: 0px;
-    z-index: -2;
-    top: 0px;
-}
-
-.answer{
-    margin-top: 50px;
 }

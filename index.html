@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="./auto.js"></script>
@@ -15,8 +18,8 @@
 <body>
 
     <section class="auto">
-        <div class="question">
-            <div id="autoInfo">
+        <div >
+            <div id="autoInfo" class="question">
                 <div class="carCard" id="test">
                     <table>
                         <tbody>
@@ -49,12 +52,36 @@
             </div>
 
         </div>
-        <div class="answer"></div>
-        <input id="inputOwnDriver" type="text" placeholder="Add our own driver"> <span id="answerOwnDriver"></span>
-        <input id="inputFindDriver" type="text" placeholder="Find driver"> <span id="answerFindDriver"></span>
-        <input id="inputDistance" type="number" placeholder="Enter distance, km">
-        <div><b>Estimated trip time: </b><span id="hours">__</span></div>
-        <div> <b>Estimated fuel consumption:</b> <span id="liters">__</span> liters</div>
+        <div class="inputs">
+            <div class="drivers">
+                <input id="inputOwnDriver" type="text" placeholder="Add our own driver"> <span
+                    id="answerOwnDriver"></span>
+                <input id="inputFindDriver" type="text" placeholder="Find driver"> <span id="answerFindDriver"></span>
+            </div>
+            <div class="trip">
+                <input id="inputDistance" type="number" placeholder="Enter distance, km">
+                <div>
+                    <p><b>Estimated trip time: </b><span id="hours">__</span></p>
+                </div>
+                <div>
+                    <p> <b>Estimated fuel consumption:</b> <span id="liters">__</span> liters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="time">
+        <div class="question" id="clock">
+            15:40:36
+        </div>
+        <div class="inputs">
+            <input type="number" id="secondsInput" placeholder="Seconds"> 
+            <!-- <span>&#9745;</span> -->
+            <input type="number" id="minutesInput" placeholder="Minutes">
+            <input type="number" id="hoursInput" placeholder="Hours">
+
+        </div>
+
     </section>
 
 </body>
