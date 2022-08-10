@@ -17,19 +17,19 @@ function changeTime() {
     let changedHours = Number(document.getElementById('hoursInput').value);
 
 
-    let secondsToDisplay = (s + changedSeconds % 60) % 60;                                                  
+    let secondsToDisplay = Math.floor((s + changedSeconds % 60) % 60);                                                  
     secondsToDisplay = (secondsToDisplay < 10) ? "0" + secondsToDisplay : secondsToDisplay;
 
 
     let minutesToDisplay = m;
     (secondsToDisplay === 0) ? ++minutesToDisplay : false;
-    minutesToDisplay = (m + Math.floor(changedSeconds / 60) + changedMinutes % 60) % 60;
+    minutesToDisplay = Math.floor((m + Math.floor(changedSeconds / 60) + changedMinutes % 60) % 60);
     minutesToDisplay = (minutesToDisplay < 10) ? "0" + minutesToDisplay : minutesToDisplay;
 
 
     let hoursToDisplay = h;
     (minutesToDisplay === 0) ? ++hoursToDisplay : false;
-    hoursToDisplay = (h + changedHours % 24 + Math.floor(changedMinutes / 60) + Math.floor(changedSeconds / 3600)) % 24;
+    hoursToDisplay = Math.floor((h + changedHours % 24 + Math.floor(changedMinutes / 60) + Math.floor(changedSeconds / 3600)) % 24);
     hoursToDisplay = (hoursToDisplay < 10) ? "0" + hoursToDisplay : hoursToDisplay;
 
     document.getElementById('clock').innerHTML = hoursToDisplay + ':' + minutesToDisplay + ':' + secondsToDisplay;
