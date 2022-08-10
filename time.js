@@ -1,20 +1,38 @@
 //display time
-setInterval(displayTime, 1000);
+setInterval(changeTime, 1000);
 
-function displayTime() {
+document.getElementById('secondsInput').addEventListener('change', changeTime);    
+document.getElementById('minutesInput').addEventListener('change', changeTime);
+document.getElementById('hoursInput').addEventListener('change', changeTime);
 
-    const time = new Date();
+function changeTime() {
 
-    let h = time.getHours();
-    let m = time.getMinutes();
-    let s = time.getSeconds();
+    const currentTime = new Date();                         //current time as default and basis for calc
+    let h = currentTime.getHours();
+    let m = currentTime.getMinutes();
+    let s = currentTime.getSeconds();
+
+    let changedSeconds = Number(document.getElementById('secondsInput').value);
+    let changedMinutes = Number(document.getElementById('minutesInput').value);
+    let changedHours = Number(document.getElementById('hoursInput').value);
 
 
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
+    let secondsToDisplay = (s + changedSeconds % 60) % 60;                                                  
+    secondsToDisplay = (secondsToDisplay < 10) ? "0" + secondsToDisplay : secondsToDisplay;
 
-    document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+
+    let minutesToDisplay = m;
+    (secondsToDisplay === 0) ? ++minutesToDisplay : false;
+    minutesToDisplay = (m + Math.floor(changedSeconds / 60) + changedMinutes % 60) % 60;
+    minutesToDisplay = (minutesToDisplay < 10) ? "0" + minutesToDisplay : minutesToDisplay;
+
+
+    let hoursToDisplay = h;
+    (minutesToDisplay === 0) ? ++hoursToDisplay : false;
+    hoursToDisplay = (h + changedHours % 24 + Math.floor(changedMinutes / 60) + Math.floor(changedSeconds / 3600)) % 24;
+    hoursToDisplay = (hoursToDisplay < 10) ? "0" + hoursToDisplay : hoursToDisplay;
+
+    document.getElementById('clock').innerHTML = hoursToDisplay + ':' + minutesToDisplay + ':' + secondsToDisplay;
 
 }
 
