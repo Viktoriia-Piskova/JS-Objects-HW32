@@ -34,6 +34,8 @@ function changeTime() {
 
     document.getElementById('clock').innerHTML = hoursToDisplay + ':' + minutesToDisplay + ':' + secondsToDisplay;
 
+    
+
 }
 
 

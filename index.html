@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="./auto.js"></script>
     <script defer src="./time.js"></script>
+    <script src="./fraction.js"></script>
     <title>Objects Javascript Homework 32</title>
 </head>
 
@@ -72,7 +73,7 @@
 
     <section class="time">
         <div class="question" id="clock">
-            
+
         </div>
         <div class="inputs" id="clockInputs">
             <input type="number" id="hoursInput" placeholder="Change hours to">
@@ -80,6 +81,37 @@
             <input type="number" id="secondsInput" placeholder="Change seconds to">
         </div>
 
+    </section>
+
+
+    <section>
+        <div class="question fractions">
+            <div>
+                <input class="fraction" type="number" id="a" placeholder="a">
+                <hr>
+                <input class="fraction" type="number" id="b" placeholder="b">
+            </div>
+            <div class="actions">
+                <button class="math" id="divide">/</button>
+                <button class="math" id="multiple">*</button>
+                <button class="math" id="add">+</button>
+                <button class="math" id="subtract">-</button>
+            </div>
+            <div>
+                <input class="fraction" type="number" id="c" placeholder="c">
+                <hr>
+                <input class="fraction" type="number" id="d" placeholder="d">
+            </div>
+        </div>
+
+        <div class="inputs fractions">
+            <div>
+                <div class="fraction answer"> <p id="x"> x </p> </div>
+                <hr>
+                <div class="fraction answer"> <p id="y"> y </p> </div>
+            </div>
+
+        </div>
     </section>
 
 </body>
