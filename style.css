@@ -87,9 +87,13 @@ img {
 
 .fractions{
   display: flex;
-  align-content: center;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
   text-align: end;
+}
+
+.fractions p{
+  font-size: 5rem;
 }
 
 .fraction{
@@ -102,7 +106,9 @@ img {
 }
 
 .fraction:focus{
-  box-shadow: 5px 5px 3px blue, -5px -5px 3px blue;
+  border: none;
+  border-bottom: 2px solid white ;
+  box-shadow: 0px 5px 0px blue;
 
 }
 
@@ -122,6 +128,7 @@ img {
   text-align: center;
   transition: all 300ms;
   border: none;
+  margin: 10px;
 }
 
 .math:hover{
@@ -142,4 +149,37 @@ img {
 
 p{
   line-height: initial;;
+}
+
+.mathred{
+  height: 3rem;
+  width: 13rem;
+  background-color: blue;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  transition: all 300ms;
+  border: none;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.mathred:hover{
+  background-color: navy;
+}
+
+.full-fraction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integer{
+  height: 20rem;
+  font-size: 20rem;
+  text-align: end;
+}
+
+.integer p {
+  font-size: 20rem;
 }

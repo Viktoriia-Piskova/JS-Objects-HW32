@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="./auto.js"></script>
     <script defer src="./time.js"></script>
-    <script src="./fraction.js"></script>
+    <script defer src="./fraction.js"></script>
     <title>Objects Javascript Homework 32</title>
 </head>
 
@@ -84,31 +84,56 @@
     </section>
 
 
-    <section>
+    <section id="fractions">
         <div class="question fractions">
-            <div>
-                <input class="fraction" type="number" id="a" placeholder="a">
-                <hr>
-                <input class="fraction" type="number" id="b" placeholder="b">
+            <div class="full-fraction" id="firstFraction">
+                <div class="integer">
+                    <input class="fraction integer" type="number" id="int1" placeholder="0">
+                </div>
+                <div class="fractional">
+                    <input class="fraction" type="number" id="num1" placeholder="a">
+                    <hr>
+                    <input class="fraction" type="number" id="denom1" placeholder="b">
+                </div>
             </div>
+
             <div class="actions">
+                <button class="mathred" id="reduce">reduce all</button>
                 <button class="math" id="divide">/</button>
                 <button class="math" id="multiple">*</button>
                 <button class="math" id="add">+</button>
                 <button class="math" id="subtract">-</button>
             </div>
-            <div>
-                <input class="fraction" type="number" id="c" placeholder="c">
-                <hr>
-                <input class="fraction" type="number" id="d" placeholder="d">
+
+            <div class="full-fraction" id="secondFraction">
+                <div class="integer">
+                    <input class="fraction integer" type="number" id="int2" placeholder="0">
+                </div>
+                <div class="fractional">
+                    <input class="fraction" type="number" id="num2" placeholder="c">
+                    <hr>
+                    <input class="fraction" type="number" id="denom2" placeholder="d">
+                </div>
             </div>
         </div>
 
         <div class="inputs fractions">
-            <div>
-                <div class="fraction answer"> <p id="x"> x </p> </div>
-                <hr>
-                <div class="fraction answer"> <p id="y"> y </p> </div>
+            <div><span>Answer:</span></div>
+            <div class="full-fraction">
+                <div class="integer">
+                    <div class="fraction integer" id="inResult">
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="fractional">
+                    <div class="fraction answer">
+                        <p id="x"> x </p>
+                    </div>
+                    <hr>
+                    <div class="fraction answer">
+                        <p id="y"> y </p>
+                    </div>
+                </div>
             </div>
 
         </div>
