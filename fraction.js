@@ -21,7 +21,6 @@ function readFirstFraction(event) {
     let objProp = event.target.getAttribute('id');
     let objValue = Number(event.target.value);
     firstFraction[objProp] = objValue;
-
 }
 
 
@@ -29,7 +28,6 @@ function readSecondFraction(event) {
     let objProp = event.target.getAttribute('id');
     let objValue = Number(event.target.value);
     secondFraction[objProp] = objValue;
-
 }
 
 
@@ -49,6 +47,28 @@ function validate() {
 }
 
 function displayResult() {
+    if (resultFraction.num > resultFraction.denom) {
+        resultFraction.int = Math.floor(resultFraction.num / resultFraction.denom);
+        resultFraction.num = resultFraction.num % resultFraction.denom;
+        
+    }
+
+    else if(resultFraction.num = resultFraction.denom){
+        resultFraction.int += 1;
+        resultFraction.num = '';
+        resultFraction.denom = '';
+        
+    }
+
+    for (let i = resultFraction.num; i > 1; i--) {
+        if (resultFraction.num % i == 0 && resultFraction.denom % i == 0) {
+            resultFraction.num = resultFraction.num / i;
+            resultFraction.denom = resultFraction.denom / i;
+            return
+        }
+    }
+
+
     document.getElementById('intResult').innerHTML = `${resultFraction.int}`;
     document.getElementById('numResult').innerHTML = `${resultFraction.num}`;
     document.getElementById('denomResult').innerHTML = `${resultFraction.denom}`;
@@ -117,9 +137,6 @@ function divideFractions() {
 
     displayResult()
 }
-
-
-// reducing common fraction: 1) find the greatest common divider both for numerator and denominator; 2) divide both
 
 
 
