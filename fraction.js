@@ -1,53 +1,128 @@
 //create fraction's object and validate
+const firstFraction = {
+    int1: 0
+};
+const secondFraction = {
+    int2: 0
+};
+const resultFraction = {
+    int: ""
+};
 
-document.getElementById('fractions').addEventListener('focusout', () => {readFraction(event)});
-//document.getElementById('secondFraction').addEventListener('focusout', readFraction);
+document.getElementById('firstFraction').addEventListener('focusout', () => { readFirstFraction(event) });
+document.getElementById('secondFraction').addEventListener('focusout', () => { readSecondFraction(event) });
+document.getElementById('divide').addEventListener('click', divideFractions);
+document.getElementById('multiple').addEventListener('click', multipleFractions);
+document.getElementById('subtract').addEventListener('click', subtractFractions);
+document.getElementById('add').addEventListener('click', addFractions);
 
 
-function readFraction(event) {
-    console.log(event.target.getAttribute('id'));
-
-    let objName = event.target.parentNode.parentNode.id;
-    console.log(objName)
-    return
-
-
-
-
-// const firstFraction = {
-//   num1: a,
-//   denom1: b,
-//   integer1: int1 
-// }
-
+function readFirstFraction(event) {
+    let objProp = event.target.getAttribute('id');
+    let objValue = Number(event.target.value);
+    firstFraction[objProp] = objValue;
 
 }
 
 
-document.getElementById('reduce').addEventListener('click', reduceFraction);
+function readSecondFraction(event) {
+    let objProp = event.target.getAttribute('id');
+    let objValue = Number(event.target.value);
+    secondFraction[objProp] = objValue;
+
+}
 
 
-// document.getElementById('divide').addEventListener('click', divideFractions);
-// document.getElementById('multiple').addEventListener('click', multipleFractions);
-// document.getElementById('add').addEventListener('click', addFractions);
-// document.getElementById('subtract').addEventListener('click', subtractFractions);
+function validate() {
+    if (firstFraction.denom1 === 0 || secondFraction.denom2 === 0) {
+        alert("Denominator can't be a zero");
+        return false;
+    }
+    else if (!firstFraction.denom1 || !secondFraction.denom2 || !firstFraction.num1 || !secondFraction.num2) {
+        alert("Please, enter valid data")
+        return false
+    }
+    else {
+        return true
+    }
+
+}
+
+function displayResult() {
+    document.getElementById('intResult').innerHTML = `${resultFraction.int}`;
+    document.getElementById('numResult').innerHTML = `${resultFraction.num}`;
+    document.getElementById('denomResult').innerHTML = `${resultFraction.denom}`;
+}
+
+function addFractions() {
+    let valid = validate();
+    if (valid === false) {
+        return false
+    }
+
+    let intResult = firstFraction.int1 + secondFraction.int2;
+    let commonDenom = firstFraction.denom1 * secondFraction.denom2;
+    let resultNum = firstFraction.num1 * secondFraction.denom2 + secondFraction.num2 * firstFraction.denom1;
+
+    resultFraction.int = intResult;
+    resultFraction.num = resultNum;
+    resultFraction.denom = commonDenom;
+
+    displayResult()
+}
+
+function subtractFractions() {
+    let valid = validate();
+    if (valid === false) {
+        return false
+    }
+
+    let intResult = firstFraction.int1 - secondFraction.int2;
+    let commonDenom = firstFraction.denom1 * secondFraction.denom2;
+    let resultNum = firstFraction.num1 * secondFraction.denom2 - secondFraction.num2 * firstFraction.denom1;
+
+    resultFraction.int = intResult;
+    resultFraction.num = resultNum;
+    resultFraction.denom = commonDenom;
+
+    displayResult()
+}
 
 
+function multipleFractions() {
+    let valid = validate();
+    if (valid === false) {
+        return false
+    }
 
-//read 2 common fractions
+    let multipleNum1 = firstFraction.int1 * firstFraction.denom1 + firstFraction.num1;
+    let multipleNum2 = secondFraction.int2 * secondFraction.denom2 + secondFraction.num2;
+    resultFraction.num = multipleNum1 * multipleNum2;
+    resultFraction.denom = firstFraction.denom1 * secondFraction.denom2;
+
+    displayResult()
+}
+
+function divideFractions() {
+    let valid = validate();
+    if (valid === false) {
+        return false
+    }
+
+    let multipleNum1 = firstFraction.int1 * firstFraction.denom1 + firstFraction.num1;
+    let multipleNum2 = secondFraction.int2 * secondFraction.denom2 + secondFraction.num2;
+
+    resultFraction.num = multipleNum1 * secondFraction.denom2;
+    resultFraction.denom = firstFraction.denom1 * multipleNum2;
+
+    displayResult()
+}
 
 
 // reducing common fraction: 1) find the greatest common divider both for numerator and denominator; 2) divide both
 
 
 
-//minus func + reduc
-
-//plus func + reduc
-
-//divide func 
-
-//multiple funct
 
 
 
