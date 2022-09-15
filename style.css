@@ -1,0 +1,185 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 3;
+}
+
+section {
+ margin-bottom: 20px;
+}
+
+.carCard {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+}
+
+table {
+  background-color: #000203;
+  color: #c0c0c0;
+}
+
+td {
+  padding: 0px 20px;
+}
+
+tr {
+  border-bottom: #5373fd 1px solid;
+}
+
+.answer-auto {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+input {
+  display: block;
+  height: 40px;
+  margin: 20px 0px;
+}
+
+input:focus {
+  border: 3px solid #5373fd; 
+ 
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.answer {
+  margin-top: 50px;
+}
+
+.question {
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    209deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 40, 255, 1) 99%
+  );
+}
+
+.inputs{
+    background-color: #000203;
+    color: white;
+    padding: 20px 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#clock{
+    width: 100%;
+    padding: 9%;
+    text-align: center;
+    color: white;
+    font-size: 12rem;
+    text-shadow: 8px 8px black
+
+}
+
+
+.fractions{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: end;
+}
+
+.fractions p{
+  font-size: 5rem;
+}
+
+.fraction{
+  height: 10rem;
+  width: 20rem;
+  background: none;
+  border: none;
+  font-size: 10rem;
+  color: white;
+}
+
+.fraction:focus{
+  border: none;
+  border-bottom: 2px solid white ;
+  box-shadow: 0px 5px 0px blue;
+
+}
+
+.actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.math{
+  background-color: #000203;
+  color: white;
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+  text-align: center;
+  transition: all 300ms;
+  border: none;
+  margin: 10px;
+}
+
+.math:hover{
+  background-color: blue;
+  
+}
+
+.math:active{
+ background-color: navy;
+ color: black;
+}
+
+.answer{
+  display: inline;
+  width: auto;
+  text-align: end;
+}
+
+p{
+  line-height: initial;;
+}
+
+.mathred{
+  height: 3rem;
+  width: 13rem;
+  background-color: blue;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  transition: all 300ms;
+  border: none;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.mathred:hover{
+  background-color: navy;
+}
+
+.full-fraction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integer{
+  height: 20rem;
+  font-size: 20rem;
+  text-align: end;
+}
+
+.integer p {
+  font-size: 20rem;
+}

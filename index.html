@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./auto.js"></script>
+    <script defer src="./time.js"></script>
+    <script defer src="./fraction.js"></script>
+    <title>Objects Javascript Homework 32</title>
+</head>
+
+<body>
+
+    <section class="auto">
+        <div>
+            <div id="autoInfo" class="question">
+                <div class="carCard" id="test">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Brand</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>Year</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>Consumption</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>Drivers</td>
+                                <td>T</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="image-container">
+                        <img src="./car-img/tesla-x.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="inputs">
+            <div class="drivers">
+                <input id="inputOwnDriver" type="text" placeholder="Add our own driver"> <span
+                    id="answerOwnDriver"></span>
+                <input id="inputFindDriver" type="text" placeholder="Find driver"> <span id="answerFindDriver"></span>
+            </div>
+            <div class="trip">
+                <input id="inputDistance" type="number" placeholder="Enter distance, km">
+                <div>
+                    <p><b>Estimated trip time: </b><span id="hours">__</span></p>
+                </div>
+                <div>
+                    <p> <b>Estimated fuel consumption:</b> <span id="liters">__</span> liters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="time">
+        <div class="question" id="clock">
+
+        </div>
+        <div class="inputs" id="clockInputs">
+            <input type="number" id="hoursInput" placeholder="Change hours to">
+            <input type="number" id="minutesInput" placeholder="Change minutes to">
+            <input type="number" id="secondsInput" placeholder="Change seconds to">
+        </div>
+
+    </section>
+
+
+    <section id="fractions">
+        <div class="question fractions">
+            <div class="full-fraction" id="firstFraction">
+                <div class="integer">
+                    <input class="fraction integer" type="number" id="int1" placeholder="0">
+                </div>
+                <div class="fractional">
+                    <input class="fraction" type="number" id="num1" placeholder="a">
+                    <hr>
+                    <input class="fraction" type="number" id="denom1" placeholder="b">
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="mathred" id="reduce">reduce all</button>
+                <button class="math" id="divide">/</button>
+                <button class="math" id="multiple">*</button>
+                <button class="math" id="add">+</button>
+                <button class="math" id="subtract">-</button>
+            </div>
+
+            <div class="full-fraction" id="secondFraction">
+                <div class="integer">
+                    <input class="fraction integer" type="number" id="int2" placeholder="0">
+                </div>
+                <div class="fractional">
+                    <input class="fraction" type="number" id="num2" placeholder="c">
+                    <hr>
+                    <input class="fraction" type="number" id="denom2" placeholder="d">
+                </div>
+            </div>
+        </div>
+
+        <div class="inputs fractions">
+            <div><span>Answer:</span></div>
+            <div class="full-fraction">
+                <div class="integer">
+                    <div class="fraction integer" >
+                        <p id="intResult"></p>
+                    </div>
+                </div>
+                <div class="fractional">
+                    <div class="fraction answer">
+                        <p id="numResult"> x </p>
+                    </div>
+                    <hr>
+                    <div class="fraction answer">
+                        <p id="denomResult"> y </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
